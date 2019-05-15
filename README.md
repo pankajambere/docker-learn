@@ -19,4 +19,4 @@ Steps involved to setup on Windows:
 3. Run docker image: docker run -p 9001:80 docker-learn-python
 4. List running images: docker container ls
 5. Stop docker app: docker container stop <pid>
- 
+6. Run docker image from repository: docker run -p 9001:80 pankaj1620/docker-learn:python 

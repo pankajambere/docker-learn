@@ -13,6 +13,14 @@ Steps involved to setup on Windows:
 5. Create a tag for docker image to upload to repository: docker tag docker-learn-python pankaj1620/docker-learn:python
 6. Push the image to repository: docker push pankaj1620/docker-learn:python
 
+## Bring up multiple instances with load balancing(Services)
+1. Create new docker-compose.yml file with configuration for multiple instances
+2. Initialize swarm with command: docker swarm init
+3. Deploy image to create instances(Stack): docker stack deploy -c docker-compose.yml <stack_name>
+4. To list stack: docker service ps <stack_name>_web
+5. To remove stack and bring down apps: docker stack rm <stack_name>
+6. To exit swarm: docker swarm leave --force
+
 ## How to
 1. Create image: docker build --tag=docker-learn-python .
 2. List local docker images: docker image ls [-a]
